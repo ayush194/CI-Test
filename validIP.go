@@ -20,7 +20,7 @@ func isValidIP(ip string) bool {
 	ip_slice := strings.Split(ip, ".")
 	if len(ip_slice) == 4 {
 		for i := 0; i < 4; i++ {
-			if len(ip_slice[i]) > 1 && (ip_slice[i][0] == '0' && ip_slice[i][1] == '0') {
+			if len(ip_slice[i]) > 1 && (ip_slice[i][0] == '0') {
 				return false
 			} else if bit, err := strconv.Atoi(ip_slice[i]); err != nil {
 				return false
